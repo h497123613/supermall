@@ -1,5 +1,5 @@
 <template>
- <div>
+ <div class="MainTabBar">
    <tab-bar>
       <tab-bar-item path="/home">
         <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt="">
@@ -37,4 +37,8 @@ export default {
 
 </script>
 <style>
+  .MainTabBar{
+    position:absolute;
+    z-index: 10;
+  }
 </style>

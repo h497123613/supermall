@@ -3,6 +3,10 @@ import VueRouter from "vue-router"
 
 Vue.use(VueRouter)
 
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 
 const home = () => import('views/home/Home')
 const category = () => import('views/category/Category')
@@ -31,9 +35,9 @@ const routes = [
     component: profile
   }
 ]
-const router =new VueRouter({
+const router = new VueRouter({
   routes,
-  mode:'history'
+  mode: 'history'
 })
 
 export default router
