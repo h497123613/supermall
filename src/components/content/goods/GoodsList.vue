@@ -22,12 +22,11 @@ export default {
 }
 
 </script>
-<style>
+<style >
   .goods{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-
 
 </style>
